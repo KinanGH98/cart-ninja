@@ -9,10 +9,22 @@ import LoadingSpinner from "./components/LoadingSpinner.jsx";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./components/Footer.jsx";
+import {CircleLoader} from "react-spinners";
 
 export default function App()
 {
     const {products} = useShoppingItems()
+
+    // The products is null when supabase database is paused.
+    if (!products) return (
+        <div className='d-flex gap-5 text-center text-muted flex-column justify-content-center align-items-center'
+             style={{height: '100vh'}}>
+            <h4>Sorry, the database is paused 😢
+                <br/>
+                try again later.
+            </h4>
+        </div>)
+
     return (
         <>
             {
