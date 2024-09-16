@@ -1,6 +1,6 @@
 ﻿/* Tooltips style override. */
 .styles-module_tooltip__mnnfp {
-    z-index: 15000 !important;
+    z-index: 1500000 !important;
     border-radius: 15px !important;
     padding: 20px !important;
     color: white !important;

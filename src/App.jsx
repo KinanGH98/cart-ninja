@@ -9,7 +9,6 @@ import LoadingSpinner from "./components/LoadingSpinner.jsx";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./components/Footer.jsx";
-import {CircleLoader} from "react-spinners";
 
 export default function App()
 {
