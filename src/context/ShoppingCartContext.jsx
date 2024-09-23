@@ -55,6 +55,7 @@ export const ShoppingCartProvider = props =>
     {
         // Ignore the initial products change on page load. 
         if (isLoadingProducts) return;
+        if (!products) return;
 
         const updatedCartItems = cartItems.filter(cartItem =>
             products.some(product => product.id === cartItem.id)
